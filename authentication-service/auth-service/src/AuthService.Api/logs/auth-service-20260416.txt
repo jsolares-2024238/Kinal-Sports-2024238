@@ -1,0 +1,108 @@
+[2026-04-16 08:28:39 INF] Verificando conexión a la base de datos... {"SourceContext":"Program"}
+[2026-04-16 08:28:39 INF] Base de datos lista. Ejecutando datos semilla... {"SourceContext":"Program"}
+[2026-04-16 08:28:39 INF] Inicialización de base de datos completada exitosamente {"SourceContext":"Program"}
+[2026-04-16 08:28:39 INF] API de AuthService está ejecutándose en http://localhost:5079. Endpoint de salud: http://localhost:5079/api/v1/health {"SourceContext":"Program"}
+[2026-04-16 08:30:06 WRN] Failed to determine the https port for redirect. {"EventId":{"Id":3,"Name":"FailedToDeterminePort"},"SourceContext":"Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware","RequestId":"0HNKROIJPHK7G:00000001","RequestPath":"/api/v1/Auth/login","ConnectionId":"0HNKROIJPHK7G"}
+[2026-04-16 08:30:06 INF] HTTP OPTIONS /api/v1/Auth/login responded 204 in 7.3553 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNKROIJPHK7G:00000001","ConnectionId":"0HNKROIJPHK7G"}
+[2026-04-16 08:30:06 INF] User login succeeded {"EventId":{"Id":1002,"Name":"LogUserLoggedIn"},"SourceContext":"AuthService.Application.Services.AuthService","ActionId":"544d8869-c829-4825-9fa7-5b2a50a1d7f1","ActionName":"AuthService.Api.Controllers.AuthController.LoginI (AuthService.Api)","RequestId":"0HNKROIJPHK7G:00000002","RequestPath":"/api/v1/Auth/login","ConnectionId":"0HNKROIJPHK7G"}
+[2026-04-16 08:30:06 INF] HTTP POST /api/v1/Auth/login responded 200 in 677.3251 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNKROIJPHK7G:00000002","ConnectionId":"0HNKROIJPHK7G"}
+[2026-04-16 08:34:08 INF] HTTP OPTIONS /api/v1/Auth/login responded 204 in 0.5300 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNKROIJPHK7H:00000001","ConnectionId":"0HNKROIJPHK7H"}
+[2026-04-16 08:34:08 INF] User login succeeded {"EventId":{"Id":1002,"Name":"LogUserLoggedIn"},"SourceContext":"AuthService.Application.Services.AuthService","ActionId":"544d8869-c829-4825-9fa7-5b2a50a1d7f1","ActionName":"AuthService.Api.Controllers.AuthController.LoginI (AuthService.Api)","RequestId":"0HNKROIJPHK7H:00000002","RequestPath":"/api/v1/Auth/login","ConnectionId":"0HNKROIJPHK7H"}
+[2026-04-16 08:34:08 INF] HTTP POST /api/v1/Auth/login responded 200 in 311.1439 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNKROIJPHK7H:00000002","ConnectionId":"0HNKROIJPHK7H"}
+[2026-04-16 08:39:21 INF] HTTP OPTIONS /api/v1/Auth/login responded 204 in 0.1537 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNKROIJPHK7I:00000001","ConnectionId":"0HNKROIJPHK7I"}
+[2026-04-16 08:39:22 WRN] Failed login attempt {"EventId":{"Id":1003,"Name":"LogFailedLoginAttempt"},"SourceContext":"AuthService.Application.Services.AuthService","ActionId":"544d8869-c829-4825-9fa7-5b2a50a1d7f1","ActionName":"AuthService.Api.Controllers.AuthController.LoginI (AuthService.Api)","RequestId":"0HNKROIJPHK7I:00000002","RequestPath":"/api/v1/Auth/login","ConnectionId":"0HNKROIJPHK7I"}
+[2026-04-16 08:39:22 ERR] An unhandled exception occurred {"SourceContext":"AuthService.Api.Middlewares.GlobalExceptionMiddleware","RequestId":"0HNKROIJPHK7I:00000002","RequestPath":"/api/v1/Auth/login","ConnectionId":"0HNKROIJPHK7I"}
+System.UnauthorizedAccessException: Credenciales inválidas
+   at AuthService.Application.Services.AuthService.LoginAsync(LoginDto loginDto) in C:\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Application\Services\AuthService.cs:line 193
+   at AuthService.Api.Controllers.AuthController.LoginI(LoginDto loginDto) in C:\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Api\Controllers\AuthController.cs:line 19
+   at lambda_method20(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.RateLimiting.RateLimitingMiddleware.InvokeInternal(HttpContext context, EnableRateLimitingAttribute enableRateLimitingAttribute)
+   at AuthService.Api.Middlewares.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in C:\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Api\Middlewares\GlobalExceptionMiddleware.cs:line 18
+[2026-04-16 08:39:22 INF] HTTP POST /api/v1/Auth/login responded 401 in 323.8807 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNKROIJPHK7I:00000002","ConnectionId":"0HNKROIJPHK7I"}
+[2026-04-16 08:39:23 INF] User login succeeded {"EventId":{"Id":1002,"Name":"LogUserLoggedIn"},"SourceContext":"AuthService.Application.Services.AuthService","ActionId":"544d8869-c829-4825-9fa7-5b2a50a1d7f1","ActionName":"AuthService.Api.Controllers.AuthController.LoginI (AuthService.Api)","RequestId":"0HNKROIJPHK7I:00000003","RequestPath":"/api/v1/Auth/login","ConnectionId":"0HNKROIJPHK7I"}
+[2026-04-16 08:39:23 INF] HTTP POST /api/v1/Auth/login responded 200 in 79.0045 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNKROIJPHK7I:00000003","ConnectionId":"0HNKROIJPHK7I"}
+[2026-04-16 08:43:20 INF] HTTP OPTIONS /api/v1/Auth/login responded 204 in 0.1395 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNKROIJPHK7J:00000001","ConnectionId":"0HNKROIJPHK7J"}
+[2026-04-16 08:43:20 WRN] Failed login attempt {"EventId":{"Id":1003,"Name":"LogFailedLoginAttempt"},"SourceContext":"AuthService.Application.Services.AuthService","ActionId":"544d8869-c829-4825-9fa7-5b2a50a1d7f1","ActionName":"AuthService.Api.Controllers.AuthController.LoginI (AuthService.Api)","RequestId":"0HNKROIJPHK7J:00000002","RequestPath":"/api/v1/Auth/login","ConnectionId":"0HNKROIJPHK7J"}
+[2026-04-16 08:43:20 ERR] An unhandled exception occurred {"SourceContext":"AuthService.Api.Middlewares.GlobalExceptionMiddleware","RequestId":"0HNKROIJPHK7J:00000002","RequestPath":"/api/v1/Auth/login","ConnectionId":"0HNKROIJPHK7J"}
+System.UnauthorizedAccessException: Credenciales inválidas
+   at AuthService.Application.Services.AuthService.LoginAsync(LoginDto loginDto) in C:\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Application\Services\AuthService.cs:line 193
+   at AuthService.Api.Controllers.AuthController.LoginI(LoginDto loginDto) in C:\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Api\Controllers\AuthController.cs:line 19
+   at lambda_method20(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.RateLimiting.RateLimitingMiddleware.InvokeInternal(HttpContext context, EnableRateLimitingAttribute enableRateLimitingAttribute)
+   at AuthService.Api.Middlewares.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in C:\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Api\Middlewares\GlobalExceptionMiddleware.cs:line 18
+[2026-04-16 08:43:20 INF] HTTP POST /api/v1/Auth/login responded 401 in 52.1408 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNKROIJPHK7J:00000002","ConnectionId":"0HNKROIJPHK7J"}
+[2026-04-16 08:43:32 INF] HTTP OPTIONS /api/v1/Auth/login responded 204 in 0.1154 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNKROIJPHK7J:00000003","ConnectionId":"0HNKROIJPHK7J"}
+[2026-04-16 08:43:33 INF] User login succeeded {"EventId":{"Id":1002,"Name":"LogUserLoggedIn"},"SourceContext":"AuthService.Application.Services.AuthService","ActionId":"544d8869-c829-4825-9fa7-5b2a50a1d7f1","ActionName":"AuthService.Api.Controllers.AuthController.LoginI (AuthService.Api)","RequestId":"0HNKROIJPHK7J:00000004","RequestPath":"/api/v1/Auth/login","ConnectionId":"0HNKROIJPHK7J"}
+[2026-04-16 08:43:33 INF] HTTP POST /api/v1/Auth/login responded 200 in 46.2874 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNKROIJPHK7J:00000004","ConnectionId":"0HNKROIJPHK7J"}
+[2026-04-16 08:55:27 INF] HTTP OPTIONS /api/v1/Auth/login responded 204 in 0.1494 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNKROIJPHK7K:00000001","ConnectionId":"0HNKROIJPHK7K"}
+[2026-04-16 08:55:27 WRN] Failed login attempt {"EventId":{"Id":1003,"Name":"LogFailedLoginAttempt"},"SourceContext":"AuthService.Application.Services.AuthService","ActionId":"544d8869-c829-4825-9fa7-5b2a50a1d7f1","ActionName":"AuthService.Api.Controllers.AuthController.LoginI (AuthService.Api)","RequestId":"0HNKROIJPHK7K:00000002","RequestPath":"/api/v1/Auth/login","ConnectionId":"0HNKROIJPHK7K"}
+[2026-04-16 08:55:27 ERR] An unhandled exception occurred {"SourceContext":"AuthService.Api.Middlewares.GlobalExceptionMiddleware","RequestId":"0HNKROIJPHK7K:00000002","RequestPath":"/api/v1/Auth/login","ConnectionId":"0HNKROIJPHK7K"}
+System.UnauthorizedAccessException: Credenciales inválidas
+   at AuthService.Application.Services.AuthService.LoginAsync(LoginDto loginDto) in C:\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Application\Services\AuthService.cs:line 193
+   at AuthService.Api.Controllers.AuthController.LoginI(LoginDto loginDto) in C:\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Api\Controllers\AuthController.cs:line 19
+   at lambda_method20(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.RateLimiting.RateLimitingMiddleware.InvokeInternal(HttpContext context, EnableRateLimitingAttribute enableRateLimitingAttribute)
+   at AuthService.Api.Middlewares.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in C:\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Api\Middlewares\GlobalExceptionMiddleware.cs:line 18
+[2026-04-16 08:55:27 INF] HTTP POST /api/v1/Auth/login responded 401 in 56.4877 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNKROIJPHK7K:00000002","ConnectionId":"0HNKROIJPHK7K"}
+[2026-04-16 08:55:31 INF] User login succeeded {"EventId":{"Id":1002,"Name":"LogUserLoggedIn"},"SourceContext":"AuthService.Application.Services.AuthService","ActionId":"544d8869-c829-4825-9fa7-5b2a50a1d7f1","ActionName":"AuthService.Api.Controllers.AuthController.LoginI (AuthService.Api)","RequestId":"0HNKROIJPHK7K:00000003","RequestPath":"/api/v1/Auth/login","ConnectionId":"0HNKROIJPHK7K"}
+[2026-04-16 08:55:31 INF] HTTP POST /api/v1/Auth/login responded 200 in 71.9165 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNKROIJPHK7K:00000003","ConnectionId":"0HNKROIJPHK7K"}
+[2026-04-16 10:13:33 INF] HTTP OPTIONS /api/v1/Auth/login responded 204 in 0.4055 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNKROIJPHK7L:00000001","ConnectionId":"0HNKROIJPHK7L"}
+[2026-04-16 10:13:33 INF] User login succeeded {"EventId":{"Id":1002,"Name":"LogUserLoggedIn"},"SourceContext":"AuthService.Application.Services.AuthService","ActionId":"544d8869-c829-4825-9fa7-5b2a50a1d7f1","ActionName":"AuthService.Api.Controllers.AuthController.LoginI (AuthService.Api)","RequestId":"0HNKROIJPHK7L:00000002","RequestPath":"/api/v1/Auth/login","ConnectionId":"0HNKROIJPHK7L"}
+[2026-04-16 10:13:33 INF] HTTP POST /api/v1/Auth/login responded 200 in 54.3551 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNKROIJPHK7L:00000002","ConnectionId":"0HNKROIJPHK7L"}
+[2026-04-16 10:22:35 INF] HTTP OPTIONS /api/v1/Auth/login responded 204 in 0.1100 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNKROIJPHK7M:00000001","ConnectionId":"0HNKROIJPHK7M"}
+[2026-04-16 10:22:35 WRN] Failed login attempt {"EventId":{"Id":1003,"Name":"LogFailedLoginAttempt"},"SourceContext":"AuthService.Application.Services.AuthService","ActionId":"544d8869-c829-4825-9fa7-5b2a50a1d7f1","ActionName":"AuthService.Api.Controllers.AuthController.LoginI (AuthService.Api)","RequestId":"0HNKROIJPHK7M:00000002","RequestPath":"/api/v1/Auth/login","ConnectionId":"0HNKROIJPHK7M"}
+[2026-04-16 10:22:35 ERR] An unhandled exception occurred {"SourceContext":"AuthService.Api.Middlewares.GlobalExceptionMiddleware","RequestId":"0HNKROIJPHK7M:00000002","RequestPath":"/api/v1/Auth/login","ConnectionId":"0HNKROIJPHK7M"}
+System.UnauthorizedAccessException: Credenciales inválidas
+   at AuthService.Application.Services.AuthService.LoginAsync(LoginDto loginDto) in C:\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Application\Services\AuthService.cs:line 193
+   at AuthService.Api.Controllers.AuthController.LoginI(LoginDto loginDto) in C:\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Api\Controllers\AuthController.cs:line 19
+   at lambda_method20(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.RateLimiting.RateLimitingMiddleware.InvokeInternal(HttpContext context, EnableRateLimitingAttribute enableRateLimitingAttribute)
+   at AuthService.Api.Middlewares.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in C:\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Api\Middlewares\GlobalExceptionMiddleware.cs:line 18
+[2026-04-16 10:22:35 INF] HTTP POST /api/v1/Auth/login responded 401 in 86.1076 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNKROIJPHK7M:00000002","ConnectionId":"0HNKROIJPHK7M"}
+[2026-04-16 10:22:47 INF] HTTP OPTIONS /api/v1/Auth/login responded 204 in 0.3641 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNKROIJPHK7M:00000003","ConnectionId":"0HNKROIJPHK7M"}
+[2026-04-16 10:22:47 INF] User login succeeded {"EventId":{"Id":1002,"Name":"LogUserLoggedIn"},"SourceContext":"AuthService.Application.Services.AuthService","ActionId":"544d8869-c829-4825-9fa7-5b2a50a1d7f1","ActionName":"AuthService.Api.Controllers.AuthController.LoginI (AuthService.Api)","RequestId":"0HNKROIJPHK7M:00000004","RequestPath":"/api/v1/Auth/login","ConnectionId":"0HNKROIJPHK7M"}
+[2026-04-16 10:22:47 INF] HTTP POST /api/v1/Auth/login responded 200 in 54.2951 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNKROIJPHK7M:00000004","ConnectionId":"0HNKROIJPHK7M"}
