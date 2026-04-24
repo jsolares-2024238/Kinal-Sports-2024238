@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\IN6AM\\KinalSports\\authentication-service\\auth-service\\src\\authservice.api\\AuthService.Api.csproj": {}
+    "C:\\IN6AM\\KinalSports\\authentication-service\\auth-service\\src\\AuthService.Api\\AuthService.Api.csproj": {}
   },
   "projects": {
-    "C:\\IN6AM\\KinalSports\\authentication-service\\auth-service\\src\\authservice.api\\AuthService.Api.csproj": {
+    "C:\\IN6AM\\KinalSports\\authentication-service\\auth-service\\src\\AuthService.Api\\AuthService.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\IN6AM\\KinalSports\\authentication-service\\auth-service\\src\\authservice.api\\AuthService.Api.csproj",
+        "projectUniqueName": "C:\\IN6AM\\KinalSports\\authentication-service\\auth-service\\src\\AuthService.Api\\AuthService.Api.csproj",
         "projectName": "AuthService.Api",
-        "projectPath": "C:\\IN6AM\\KinalSports\\authentication-service\\auth-service\\src\\authservice.api\\AuthService.Api.csproj",
+        "projectPath": "C:\\IN6AM\\KinalSports\\authentication-service\\auth-service\\src\\AuthService.Api\\AuthService.Api.csproj",
         "packagesPath": "C:\\Users\\Informatica\\.nuget\\packages\\",
-        "outputPath": "C:\\IN6AM\\KinalSports\\authentication-service\\auth-service\\src\\authservice.api\\obj\\",
+        "outputPath": "C:\\IN6AM\\KinalSports\\authentication-service\\auth-service\\src\\AuthService.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Informatica\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -155,6 +155,10 @@
               "target": "Package",
               "version": "[1.27.7, )"
             },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
             "FluentValidation.DependencyInjectionExtensions": {
               "target": "Package",
               "version": "[12.0.0, )"
@@ -242,12 +246,6 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "dependencies": {
-            "System.ComponentModel.Annotations": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -314,10 +312,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "EFCore.NamingConventions": {
-              "target": "Package",
-              "version": "[9.0.0, )"
-            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.9, )"
@@ -328,7 +322,7 @@
               "target": "Package",
               "version": "[9.0.9, )"
             },
-            "Microsoft.EntityFrameworkCore.tools": {
+            "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",

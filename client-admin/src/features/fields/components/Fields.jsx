@@ -7,7 +7,7 @@ import { useEffect as useToastEffect } from "react";
 import { showError } from "../../../shared/utils/toast.js";
  
 export const Fields = () => {
-  const { fields, loading, error, getFields } = useFieldsStore();
+  const { fields, loading, error, getFields, deleteField } = useFieldsStore();
   const [openModal, setOpenModal] = useState(false);
   const [selectedField, setSelectedField] = useState(null);
   const { openConfirm } = useUIStore();
@@ -103,7 +103,7 @@ export const Fields = () => {
                     openConfirm({
                       title: "Eliminar campo",
                       message: `¿Eliminar ${field.fieldName}?`,
-                      onConfirm: () => {},
+                      onConfirm: () => deleteField(field._id),
                     })
                   }
                 >

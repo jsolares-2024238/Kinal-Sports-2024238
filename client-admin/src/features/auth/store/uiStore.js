@@ -1,7 +1,7 @@
 import { create } from "zustand";
 
 export const useUIStore = create((set) => ({
-    model: null,
+    modal: null,
     confirm: null,
 
     openModal: (title, message, onClose) =>
@@ -11,9 +11,9 @@ export const useUIStore = create((set) => ({
 
     closeModal: () => set({ modal: null }),
 
-    openConfirm: ({ title, message, onClose, onCancel }) =>
+    openConfirm: ({ title, message, onClose, onCancel, onConfirm }) =>
         set({
-        modal: { title, message, onClose, onCancel }
+        confirm: { title, message, onClose, onCancel, onConfirm }
     }),
 
     closeConfirm: () => set({confirm: null})

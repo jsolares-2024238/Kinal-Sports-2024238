@@ -2,7 +2,6 @@ using AuthService.Application.DTOs;
 using AuthService.Application.Interfaces;
 using AuthService.Domain.Constants;
 using AuthService.Domain.Entities;
-using AuthService.Domain.Interface;
 using AuthService.Domain.Interfaces;
 
 namespace AuthService.Application.Services;

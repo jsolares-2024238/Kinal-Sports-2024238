@@ -28,3 +28,4 @@ C:\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Applica
 C:\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Application\obj\Debug\net8.0\refint\AuthService.Application.dll
 C:\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Application\obj\Debug\net8.0\AuthService.Application.pdb
 C:\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Application\obj\Debug\net8.0\ref\AuthService.Application.dll
+C:\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Application\obj\Debug\net8.0\AuthService.Application.sourcelink.json

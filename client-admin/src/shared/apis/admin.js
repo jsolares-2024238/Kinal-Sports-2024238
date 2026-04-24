@@ -12,10 +12,11 @@ export const createField = async (data) => {
 
 export const updateField = async (id, data)=>{
     return await axiosAdmin.put(`/fields/${id}`, data, {
-        headers:{"Context-Type": "multipart/form-data"}
+        headers:{"Content-Type": "multipart/form-data"}
     })
 }
-
+ 
 export const deleteField = async (id) => {
     return await axiosAdmin.put(`/fields/${id}/deactivate`)
 }
+ 

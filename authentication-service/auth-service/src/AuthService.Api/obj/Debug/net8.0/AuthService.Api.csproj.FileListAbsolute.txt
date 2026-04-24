@@ -348,3 +348,4 @@ C:\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Api\obj
 C:\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Api\obj\Debug\net8.0\AuthService.Api.pdb
 C:\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Api\obj\Debug\net8.0\AuthService.Api.genruntimeconfig.cache
 C:\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Api\obj\Debug\net8.0\ref\AuthService.Api.dll
+C:\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Api\obj\Debug\net8.0\AuthService.Api.sourcelink.json

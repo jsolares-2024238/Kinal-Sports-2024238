@@ -1,10 +1,9 @@
 import { create } from "zustand";
-import {
-    getFields,
-    createField as createFieldRequest,
-    updateField as updateFieldRequest,
-    deleteField as deleteFieldRequest
-} from "../../../shared/apis/admin";
+import { getFields,
+         createField as createFieldRequest,
+        updateField as updateFieldRequest,
+        deleteField as deleteFieldRequest
+     } from "../../../shared/apis/admin";
 
 export const useFieldsStore = create((set, get) =>({
     fields: [],
@@ -47,8 +46,7 @@ export const useFieldsStore = create((set, get) =>({
             })
         }
     },
-
-    updateField: async (id, formData) => {
+updateField: async (id, formData) => {
         try{
             set({ loading: true, error: null});
             const response = await updateFieldRequest(id, formData);
@@ -66,7 +64,7 @@ export const useFieldsStore = create((set, get) =>({
             })
         }
     },
-
+ 
     deleteField: async (id) =>{
         try{
             set({loading: true, error: null});
@@ -82,5 +80,4 @@ export const useFieldsStore = create((set, get) =>({
             })
         }
     }
-
 }))
