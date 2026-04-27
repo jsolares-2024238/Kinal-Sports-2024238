@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { AuthPage } from '../../features/auth/pages/AuthPage.jsx';
 import { DashboardPage } from '../../shared/components/layout/DashboardPage.jsx';
+import { VerifyEmailPage } from '../../features/auth/pages/VerifyEmailPage.jsx';
 import { ProtectedRoutes } from './ProtectedRoutes.jsx';
 import { UnauthorizedPage } from '../../features/auth/pages/UnauthorizedPage.jsx';
 import { Fields } from '../../features/fields/components/Fields.jsx';
@@ -15,22 +16,23 @@ export const AppRoutes = () => {
     <Routes>
       <Route path='/' element={<AuthPage />} />
       <Route path='/unauthorized' element={<UnauthorizedPage />} />
+      <Route path='/verify-email' element={<VerifyEmailPage/>}/>
       <Route
         path='/dashboard/*'
         element={
           <ProtectedRoutes>
-            <RoleGuard allowedRoles={"ADMIN_ROLE"}>
+            <RoleGuard allowedRoles={'ADMIN_ROLE'}>
               <DashboardPage />
             </RoleGuard>
           </ProtectedRoutes>
         }
       >
         <Route path='fields' element={<Fields />} />
-        <Route path='teams' element={<Teams/>}/>
-        <Route path = 'reservations' element = {<Reservations/>}/>
-        <Route path = 'tournaments' element = {<Tournaments/>}/>
-        <Route path = 'users' element = {<Users/>}/>
+        <Route path='teams' element={<Teams />} />
+        <Route path='reservations' element={<Reservations />} />
+        <Route path='tournaments' element={<Tournaments />} />
+        <Route path='users' element={<Users />} />
       </Route>
-    </Routes >
-  )
-}
+    </Routes>
+  );
+};

@@ -1,20 +1,17 @@
-
-import React from 'react'
-import { Navbar } from './layout/Navbar'
-import { Sidebar } from './layout/Sidebar'
+import React from 'react';
+import { Navbar } from './layout/Navbar';
+import { Sidebar } from './layout/Sidebar';
 
 export const DashboardContainer = ({ user, onLogout, children }) => {
   return (
     <div className='min-h-screen bg-gray-50 flex flex-col'>
-        <Navbar user={user} onLogout={onLogout}/>
-        
-        <div className='flex flex-1'>
-            <Sidebar/>
+      <Navbar user={user} onLogout={onLogout} />
 
-            <main className='flex-1 p-6'>
-                {children}
-            </main>
-        </div>
+      <div className='flex flex-1'>
+        <Sidebar />
+
+        <main className='flex-1 p-6'>{children}</main>
+      </div>
     </div>
-  )
-}
+  );
+};
