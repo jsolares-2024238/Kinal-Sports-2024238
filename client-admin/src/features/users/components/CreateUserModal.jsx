@@ -100,6 +100,10 @@ export const CreateUserModal = ({
                     value: 3,
                     message: "Debe tener al menos 3 caracteres",
                   },
+                  maxLength: {
+                    value: 25,
+                    message: "El nombre de usuario no puede superar 25 caracteres",
+                  },
                 })}
                 type="text"
                 className="w-full px-3 py-2 border rounded-lg"
