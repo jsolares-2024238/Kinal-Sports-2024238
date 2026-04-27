@@ -19,18 +19,18 @@ export const AppRoutes = () => {
         path='/dashboard/*'
         element={
           <ProtectedRoutes>
-            <RoleGuard allowedRoles={"ADMIN_ROLE"}>
+            <RoleGuard allowedRoles={'ADMIN_ROLE'}>
               <DashboardPage />
             </RoleGuard>
           </ProtectedRoutes>
         }
       >
         <Route path='fields' element={<Fields />} />
-        <Route path='teams' element={<Teams/>}/>
-        <Route path = 'reservations' element = {<Reservations/>}/>
-        <Route path = 'tournaments' element = {<Tournaments/>}/>
-        <Route path = 'users' element = {<Users/>}/>
+        <Route path='teams' element={<Teams />} />
+        <Route path='reservations' element={<Reservations />} />
+        <Route path='tournaments' element={<Tournaments />} />
+        <Route path='users' element={<Users />} />
       </Route>
-    </Routes >
-  )
-}
+    </Routes>
+  );
+};
